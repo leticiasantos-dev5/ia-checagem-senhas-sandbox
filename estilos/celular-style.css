@@ -140,26 +140,158 @@
         color: var(--cor8);
     }
 
+    /* --- CHAT - MENSAGENS --- */
+    .chat-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 35px; /* Espaçamento aumentado para dar mais respiro entre os balões */
+    }
+
+    .mensagem {
+        display: flex;
+        align-items: flex-start; /* Alinha o avatar e o balão no topo */
+        gap: 10px; /* Espaço entre o avatar e o balão */
+    }
+
+    .avatar img {
+        width: 45px; /* Tamanho do ícone de usuário/bot */
+        height: 45px;
+        border-radius: 50%; /* Deixa o ícone redondo */
+        object-fit: cover;
+    }
+
+    .balao {
+        background-color: var(--cor3);
+        padding: 15px;
+        border-radius: 15px;
+        border-top-left-radius: 0; /* Faz a pontinha do balão apontar para o robô na esquerda */
+        max-width: 85%; /* Evita que o balão encoste totalmente na borda direita */
+    }
+
+    .balao p {
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+    .balao p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* --- MENSAGEM DO USUÁRIO --- */
+    .mensagem.usuario {
+        justify-content: flex-end; /* Alinha o balão do usuário à direita */
+    }
+
+    .balao-usuario {
+        background-color: var(--cor4); /* Verde para diferenciar do bot */
+        color: #ffffff;
+        border-top-left-radius: 15px; /* Restaura a borda esquerda arredondada */
+        border-top-right-radius: 0; /* Faz a pontinha apontar para o usuário na direita */
+    }
+
+    /* --- OPÇÕES DE SENHAS FICTÍCIAS --- */
+    .opcoes-senha {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite que os botões quebrem linha se a tela for muito pequena */
+        justify-content: center; /* Centraliza os botões na tela */
+        gap: 10px; /* Espaço entre os botões reduzido um pouquinho para caberem melhor */
+        width: 100%;
+    }
+
+    .botao-senha {
+        background-color: var(--cor2);
+        color: var(--cor9);
+        border: 2px solid var(--cor3);
+        padding: 10px 14px; /* Levemente menor para caber perfeitamente no mobile */
+        border-radius: 20px; /* Bordas bem arredondadas como balões */
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+    }
+
+    .botao-senha:active {
+        background-color: var(--cor3);
+    }
+
+    /* --- ÁREA DE DIGITAÇÃO (BARRA DE BUSCA DESATIVADA) --- */
+    .area-digitacao {
+        display: flex;
+        align-items: center;
+        background-color: var(--cor3); /* Fundo uniforme escuro */
+        border-radius: 25px; /* Bordas bem arredondadas, estilo pílula */
+        padding: 5px 15px;
+        width: 100%;
+        margin-top: -15px; /* Puxa a barra para mais perto das opções acima */
+    }
+
+    .barra-busca {
+        flex-grow: 1; /* Faz a barra de texto esticar e empurrar o ícone para o canto */
+        background-color: transparent; /* Pega a cor uniforme da div 'area-digitacao' */
+        border: none;
+        color: var(--cor8); /* Cor do texto (cinza) para aparência de inativo */
+        font-size: 14px;
+        padding: 10px 5px;
+        outline: none; /* Remove aquela linha em volta ao clicar */
+        cursor: not-allowed; /* Mostra cursor de bloqueado ao passar o mouse */
+    }
+
+    .botao-imagem img {
+        width: 24px;
+        height: 24px;
+        opacity: 0.5; /* Deixa o ícone levemente transparente indicando inatividade */
+    }
+
+    /* --- NOTA DO SIMULADOR --- */
+    .nota-simulador {
+        font-size: 12px;
+        color: var(--cor8); /* Tom de cinza para ficar discreto */
+        text-align: center;
+        margin-top: -25px; /* Puxa a nota para colar na barra de busca (compensa o gap) */
+        font-style: italic;
+    }
+
+    /* --- BOTÃO VOLTAR AO INÍCIO --- */
+    .voltar-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: -15px; /* Compensa o espaçamento do chat para ficar mais próximo da nota */
+    }
+
+    .botao-voltar {
+        color: var(--cor8); /* Cor discreta para não tirar o foco da simulação */
+        text-decoration: none;
+        font-size: 12px;
+        padding: 6px 14px;
+        border: 1px solid var(--cor8); /* Apenas uma linha ao redor */
+        border-radius: 15px;
+    }
+
     /* --- BOTÃO INICIAR SIMULAÇÃO --- */
     .artigo a {
-        background-color: var(--cor4); /* Verde */
+        background-color: var(--cor2);
+        color: var(--cor9);
+        border: 2px solid var(--cor3);
+        background-color: var(--cor4); /* Verde igual aos botões de senha */
         color: #ffffff;
-        font-weight: bold;
-        font-size: 18px;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 10px;
-        box-shadow: 2px 4px 6px rgba(0,0,0,0.4);
-        text-transform: uppercase;
-        text-decoration: none;
+        border: 2px solid var(--cor4);
+        padding: 10px 14px;
+        border-radius: 20px; /* Bordas bem arredondadas como balões */
         text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
         margin-top: 15px;
-        transition: 0.3s;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     }
 
     .artigo a:active {
-        background-color: var(--cor6); /* Fica vermelho ao clicar */
-        transform: scale(0.98);
+        background-color: var(--cor3);
+        background-color: #1e702e;
+        border-color: #1e702e;
     }
 
     /* --- FOOTER --- */

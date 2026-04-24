@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Checagem de Senhas - Simulação</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="estilos/celular-style.css" media="screen and (max-width: 768px)"> <!--celular-->
+
+    <link rel="stylesheet" href="estilos/tablet-style.css"
+        media="screen and (min-width: 769px) and (max-width: 1024px)"> <!--tablet-->
+
+    <link rel="stylesheet" href="estilos/pc-style.css" media="screen and (min-width: 1025px)"> <!--pc-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="aviso">
+        <h3>PROJETO ACADÊMICO UFPR: AMBIENTE DE SIMULAÇÃO PROTEGIDO, NÃO INSIRA DADOS REAIS E NÃO UTILIZE NENHUMA DAS
+            SENHAS FICTÍCIAS.</h3>
+    </div>
+
+    <div class="layout-colunas">
+        <header class="container1" id="inicio1">
+            <div class="header">
+                <div class="logo">
+                    <img src="favicon/logo.png" alt="Logo IA Senhas">
+                </div>
+
+                <div class="titulo-principal">
+                    <h1>IA para Checagem Inteligente de Senhas</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="container2">
+            <div class="chat-container">
+
+                <!-- Mensagem do Usuário (Senha Escolhida) -->
+                <div class="mensagem usuario">
+                    <div class="balao balao-usuario">
+                        <p>qwerty2026!</p>
+                    </div>
+                    <div class="avatar">
+                        <img src="favicon/user (2).png" alt="Ícone Usuário"> <!-- Você pode usar uma imagem de avatar aqui -->
+                    </div>
+                </div>
+
+                <!-- Resposta do Robô (Balão 1: Veredito) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p>🚩 <strong>Veredito da IA: 10% de Segurança (Fraca Grave)</strong></p>
+                        <p>Puxa, essa senha é um "alvo fácil"! O problema é que ela segue uma lógica que os hackers já conhecem de cor: o caminho das teclas no teclado (qwerty) misturado com o ano atual (2026).</p>
+                    </div>
+                </div>
+
+                <!-- Resposta do Robô (Balão 2: Justificativa) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p><strong>O que aconteceu aqui? 🔍</strong></p>
+                        <p>Softwares de ataque testam sequências físicas de teclas e datas comuns em milissegundos. Por ser um padrão muito usado no mundo todo, essa combinação já está em todas as listas de senhas vazadas da internet.</p>
+                    </div>
+                </div>
+
+                <!-- Resposta do Robô (Balão 3: Sugestões) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p><strong>Dicas para ficar invencível: 💪</strong></p>
+                        <p>• <strong>Esqueça o teclado:</strong> Use letras que não sejam vizinhas.</p>
+                        <p>• <strong>Turbine o tamanho:</strong> Adicione mais caracteres (tente chegar a 14).</p>
+                        <p>• <strong>Misture tudo:</strong> Coloque mais números e símbolos no meio da senha, não só no final.</p>
+                        <p>• <strong>Fuja de datas:</strong> Não use o ano atual; use números aleatórios.</p>
+                        <p>Quer uma ajuda? Eu posso gerar uma senha forte para você agora!</p>
+                    </div>
+                </div>
+                
+                <!-- Opção para Gerar Senha Forte -->
+                <div class="opcoes-senha">
+                    <a href="#" class="botao-senha">GERAR SENHA FORTE</a>
+                </div>
+
+                <!-- Área de Input Desativada (Mantendo o padrão da pg 2) -->
+                <div class="area-digitacao">
+                    <input type="text" class="barra-busca" placeholder="Digitação desativada por segurança..." disabled>
+                    <div class="botao-imagem">
+                        <img src="favicon/magnifying-glass.png" alt="Ícone Enviar">
+                    </div>
+                </div>
+                
+                <p class="nota-simulador"><strong>Nota do Simulador:</strong> No sistema real, você digitaria sua senha aqui. Nesta versão de testes, usamos apenas botões para proteger sua identidade e cumprir a LGPD.</p>
+
+                <!-- Botão Voltar -->
+                <div class="voltar-container">
+                    <a href="pagina2.html" class="botao-voltar">← Voltar à página anterior</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>

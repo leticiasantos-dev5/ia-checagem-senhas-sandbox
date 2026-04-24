@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA Checagem de Senhas - Simulação</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="estilos/celular-style.css" media="screen and (max-width: 768px)"> <!--celular-->
+
+    <link rel="stylesheet" href="estilos/tablet-style.css"
+        media="screen and (min-width: 769px) and (max-width: 1024px)"> <!--tablet-->
+
+    <link rel="stylesheet" href="estilos/pc-style.css" media="screen and (min-width: 1025px)"> <!--pc-->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <div class="aviso">
+        <h3>PROJETO ACADÊMICO UFPR: AMBIENTE DE SIMULAÇÃO PROTEGIDO, NÃO INSIRA DADOS REAIS E NÃO UTILIZE NENHUMA DAS
+            SENHAS FICTÍCIAS.</h3>
+    </div>
+
+    <div class="layout-colunas">
+        <header class="container1" id="inicio1">
+            <div class="header">
+                <div class="logo">
+                    <img src="favicon/logo.png" alt="Logo IA Senhas">
+                </div>
+
+                <div class="titulo-principal">
+                    <h1>IA para Checagem Inteligente de Senhas</h1>
+                </div>
+            </div>
+        </header>
+
+        <main class="container2">
+            <!-- Área principal de Chat -->
+            <div class="chat-container">
+
+                <!-- Mensagem do Robô (IA) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p>Olá! Sou a IA para Checagem Inteligente de Senhas. 🤖</p>
+                        <p>Para sua segurança e privacidade, a barra de digitar está desativada neste simulador, garantindo que nenhum dado real seja coletado (Privacy by Design).</p>
+                        <p>Nota técnica: Em um ambiente real, você sempre digitaria sua senha. O sistema então consultaria automaticamente bibliotecas de senhas mais comuns e bases de dados de senhas vazadas para identificar riscos.</p>
+                        <p></p>
+                    </div>
+                </div>
+
+                <!-- Nova Mensagem do Robô pedindo para escolher -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p>Como este é um ambiente de testes, escolha uma das opções fictícias abaixo para ver como eu faria essa análise!</p>
+                    </div>
+                </div>
+
+                <!-- Opções de Senhas Fictícias -->
+                <div class="opcoes-senha">
+                    <a href="pagina3-sen1.html" class="botao-senha">qwerty2026!</a>
+                    <a href="#" class="botao-senha">Bemvindo@2026</a>
+                    <a href="#" class="botao-senha">7#pL2!wR9z*q</a>
+                </div>
+                
+                <!-- Área de Input Desativada -->
+                <div class="area-digitacao">
+                    <input type="text" class="barra-busca" placeholder="Digitação desativada por segurança..." disabled>
+                    <div class="botao-imagem">
+                        <!-- Espaço para adicionar a imagem/ícone no lado direito -->
+                        <img src="favicon/magnifying-glass.png" alt="Ícone Enviar">
+                    </div>
+                </div>
+                
+                <p class="nota-simulador"><strong>Nota do Simulador:</strong> No sistema real, você digitaria sua senha aqui. Nesta versão de testes, usamos apenas botões para proteger sua identidade e cumprir a LGPD.</p>
+
+                <!-- Botão Voltar -->
+                <div class="voltar-container">
+                    <a href="index.html" class="botao-voltar">← Voltar à página anterior</a>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
