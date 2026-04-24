@@ -7,11 +7,11 @@
     <title> IA Checagem de Senhas</title>
     <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="estilo/celular-style.css" media="screen"> <!--celular-->
+    <link rel="stylesheet" href="estilos/celular-style.css" media="screen and (max-width: 768px)"> <!--celular-->
 
-    <link rel="stylesheet" href="estilo/tablet-style.css" media="screen"> <!--tablet-->
+    <link rel="stylesheet" href="estilos/tablet-style.css" media="screen and (min-width: 769px) and (max-width: 1024px)"> <!--tablet-->
 
-    <link rel="stylesheet" href="estilo/pc-style.css" media="screen"> <!--pc-->
+    <link rel="stylesheet" href="estilos/pc-style.css" media="screen and (min-width: 1025px)"> <!--pc-->
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
@@ -20,47 +20,46 @@
 
 <body>
 
-    <header class="container1" inicio1>
-        <div class="header">
-            <div class="logo">
-                <img src="favicon/logo.png" alt="">
+    <div class="aviso">
+        <h3>PROJETO ACADÊMICO UFPR: AMBIENTE DE SIMULAÇÃO PROTEGIDO, NÃO INSIRA DADOS REAIS.</h3>
+    </div>
+
+    <div class="layout-colunas">
+        <header class="container1" id="inicio1">
+            <div class="header">
+                <div class="logo">
+                    <img src="favicon/logo.png" alt="Logo IA Senhas">
+                </div>
+
+                <div class="titulo-principal">
+                    <h1>IA para Checagem Inteligente de Senhas</h1>
+                </div>
             </div>
+        </header>
 
-            <div class="titulo-principal">
-                <h1>IA para Checagem Inteligente de Senhas</h1>
+        <main class="container2">
+            <div class="artigo">
+                <article>
+                    <h2>Sandbox: IA para Checagem de Senhas</h2>
+                    <p><strong>Sobre o Projeto:</strong>
+                        Simulador interativo desenvolvido para a disciplina de Segurança da Informação (SIN252) na UFPR, sob
+                        orientação do Professor Luciano Heitor Gallegos Marin. O sistema avalia a vulnerabilidade de senhas
+                        contra ataques modernos e vazamentos reais.</p>
 
+                    <p><strong>Conformidade e Segurança:</strong>
+                        LGPD & Privacy by Design: Para sua proteção, a barra de busca e a inserção de texto estão
+                        desativadas. Não coletamos dados reais.
+                    </p>
+                    <p><strong>Normas ISO:</strong> Estrutura baseada na ISO 27001 (Gestão) e ISO 27005 (Riscos).</p>
+
+                    <p><strong>Simulação Guiada:</strong> A interação ocorre exclusivamente através de senhas fictícias pré-selecionadas.
+                    Clique nas opções fornecidas para visualizar os vereditos da IA.</p>
+
+                    <a href="#">INICIAR SIMULAÇÃO </a>
+                </article>
             </div>
-
-            <div class="aviso">
-                <h3>PROJETO ACADÊMICO UFPR: AMBIENTE DE SIMULAÇÃO PROTEGIDO, NÃO INSIRA DADOS REAIS.</h3>
-            </div>
-
-        </div>
-
-    </header>
-
-    <main class="container2">
-        <div class="artigo">
-            <article>
-                <h2>Orientações</h2>
-                <p>Sobre o Projeto
-                    Simulador interativo desenvolvido para a disciplina de Segurança da Informação (SIN252) na UFPR, sob
-                    orientação do Professor Luciano Heitor Gallegos Marin. O sistema avalia a vulnerabilidade de senhas
-                    contra ataques modernos e vazamentos reais.
-
-                <p>Conformidade e Segurança
-                    LGPD & Privacy by Design: Para sua proteção, a barra de busca e a inserção de texto estão
-                    desativadas. Não coletamos dados reais.
-                </p>
-                <p>Normas ISO: Estrutura baseada na ISO 27001 (Gestão) e ISO 27005 (Riscos).</p>
-
-                <p>Simulação Guiada: A interação ocorre exclusivamente através de senhas fictícias pré-selecionadas.
-                Clique nas opções fornecidas para visualizar os vereditos da IA.</p></p>
-            </article>
-
-        </div>
-
-    </main>
+        </main>
+    </div>
 
     <footer>
 
