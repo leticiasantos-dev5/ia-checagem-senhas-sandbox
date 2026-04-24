@@ -42,6 +42,63 @@
         <main class="container2">
             <div class="chat-container">
 
+                <!-- Mensagem do Usuário (Senha Escolhida) -->
+                <div class="mensagem usuario">
+                    <div class="balao balao-usuario">
+                        <p>qwerty2026!</p>
+                    </div>
+                    <div class="avatar">
+                        <img src="favicon/user (2).png" alt="Ícone Usuário">
+                    </div>
+                </div>
+
+                <!-- Resposta do Robô (Balão 1: Veredito) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p>🚩 <strong>Veredito da IA: 10% de Segurança (Fraca Grave)</strong></p>
+                        <p>Puxa, essa senha é um "alvo fácil"! O problema é que ela segue uma lógica que os hackers já conhecem de cor: o caminho das teclas no teclado (qwerty) misturado com o ano atual (2026)...</p>
+                    </div>
+                </div>
+
+                <!-- Mensagem do Usuário (Pedindo mais informações) -->
+                <div class="mensagem usuario">
+                    <div class="balao balao-usuario">
+                        <p>Quero saber mais!</p>
+                    </div>
+                    <div class="avatar">
+                        <img src="favicon/user (2).png" alt="Ícone Usuário">
+                    </div>
+                </div>
+
+                <!-- Resposta do Robô (Balão 2: Justificativa) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p><strong>O que aconteceu aqui? 🔍</strong></p>
+                        <p>Softwares de ataque testam sequências físicas de teclas e datas comuns em milissegundos. Por ser um padrão muito usado no mundo todo, essa combinação já está em todas as listas de senhas vazadas da internet.</p>
+                    </div>
+                </div>
+
+                <!-- Resposta do Robô (Balão 3: Sugestões) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p><strong>Dicas para ficar invencível: 💪</strong></p>
+                        <p>• <strong>Esqueça o teclado:</strong> Use letras que não sejam vizinhas.</p>
+                        <p>• <strong>Turbine o tamanho:</strong> Adicione mais caracteres (tente chegar a 14).</p>
+                        <p>• <strong>Misture tudo:</strong> Coloque mais números e símbolos no meio da senha, não só no final.</p>
+                        <p>• <strong>Fuja de datas:</strong> Não use o ano atual; use números aleatórios.</p>
+                        <p>Quer uma ajuda? Eu posso gerar uma senha forte para você agora!</p>
+                    </div>
+                </div>
+
                 <!-- Mensagem do Usuário (Recusando ajuda) -->
                 <div class="mensagem usuario">
                     <div class="balao balao-usuario">
@@ -53,7 +110,7 @@
                 </div>
 
                 <!-- Resposta do Robô (Finalização) -->
-                <div class="mensagem robo">
+                <div class="mensagem robo" id="final">
                     <div class="avatar">
                         <img src="favicon/bot.png" alt="Ícone Robô">
                     </div>

@@ -42,6 +42,63 @@
         <main class="container2">
             <div class="chat-container">
 
+                <!-- Mensagem do Usuário (Senha Escolhida) -->
+                <div class="mensagem usuario">
+                    <div class="balao balao-usuario">
+                        <p>Bemvindo@2026</p>
+                    </div>
+                    <div class="avatar">
+                        <img src="favicon/user (2).png" alt="Ícone Usuário">
+                    </div>
+                </div>
+
+                <!-- Resposta do Robô (Balão 1: Veredito) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p>🟡 <strong>Veredito da IA: 40% de Segurança (Fraca Médio)</strong></p>
+                        <p>Essa senha é o que chamamos de "falsa segurança". Ela parece forte porque tem maiúscula, símbolo e números, mas a lógica dela é muito comum na internet e em empresas.</p>
+                    </div>
+                </div>
+
+                <!-- Mensagem do Usuário (Pedindo mais informações) -->
+                <div class="mensagem usuario">
+                    <div class="balao balao-usuario">
+                        <p>Quero saber mais!</p>
+                    </div>
+                    <div class="avatar">
+                        <img src="favicon/user (2).png" alt="Ícone Usuário">
+                    </div>
+                </div>
+
+                <!-- Resposta do Robô (Balão 2: Justificativa) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p><strong>O que a IA detectou? 🔍</strong></p>
+                        <p>Palavras como "Bemvindo", meses do ano ou saudações são as primeiras a serem testadas em ataques de dicionário. IAs de ataque varrem a internet e já conhecem esse padrão de "Palavra + @ + Ano". É uma combinação padronizada em milhares de vazamentos.</p>
+                    </div>
+                </div>
+
+                <!-- Resposta do Robô (Balão 3: Sugestões) -->
+                <div class="mensagem robo">
+                    <div class="avatar">
+                        <img src="favicon/bot.png" alt="Ícone Robô">
+                    </div>
+                    <div class="balao balao-robo">
+                        <p><strong>Dicas para subir de nível: 🚀</strong></p>
+                        <p>• <strong>Fuja do óbvio:</strong> Não use saudações ou palavras que apareçam no dicionário.</p>
+                        <p>• <strong>Misture a posição:</strong> Coloque o símbolo e os números no início ou no meio da palavra, nunca apenas no final.</p>
+                        <p>• <strong>Troque letras por códigos:</strong> Em vez de Bemvindo, use algo como B3mv!nd0.</p>
+                        <p>• <strong>Aumente o tamanho:</strong> Senhas com mais de 12 caracteres são drasticamente mais difíceis de quebrar.</p>
+                        <p>Quer uma opção imbatível? Eu posso gerar uma senha aleatória para você agora!</p>
+                    </div>
+                </div>
+
                 <!-- Mensagem do Usuário (Recusando ajuda) -->
                 <div class="mensagem usuario">
                     <div class="balao balao-usuario">
@@ -53,7 +110,7 @@
                 </div>
 
                 <!-- Resposta do Robô (Finalização) -->
-                <div class="mensagem robo">
+                <div class="mensagem robo" id="final">
                     <div class="avatar">
                         <img src="favicon/bot.png" alt="Ícone Robô">
                     </div>
