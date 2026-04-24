@@ -1,0 +1,295 @@
+@charset "UTF-8";
+
+/* Importação da fonte no topo (fora do @media para evitar erros) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --cor1: #0D1117;
+    --cor2: #161B22;
+    --cor3: #30363D;
+    --cor4: #238636;
+    --cor5: #D29922;
+    --cor6: #DA3633;
+    --cor7: #E6EDF3;
+    --cor8: #8B949E;
+    --cor9: #79C0FF;
+
+    --font1: "Inter", sans-serif;
+}
+
+/* TELA PC / NOTEBOOK (DE 1025PX EM DIANTE) */
+@media screen and (min-width: 1025px) {
+
+    /* RESET E GLOBAIS */
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: var(--font1);
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+        background-color: var(--cor1);
+        color: var(--cor7);
+    }
+
+    h1, h2, h3, legend {
+        font-family: var(--font1);
+    }
+
+    /* --- AVISO NO TOPO --- */
+    .aviso {
+        background-color: rgba(121, 192, 255, 0.1);
+        color: var(--cor9);
+        border-bottom: 1px solid rgba(121, 192, 255, 0.3);
+        text-align: center;
+        padding: 12px;
+    }
+
+    .aviso h3 {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+        letter-spacing: 0.5px;
+    }
+
+    /* --- ESTRUTURA DE COLUNAS --- */
+    .layout-colunas {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* --- HEADER --- */
+    header.container1 {
+        background-color: var(--cor2);
+        width: 100%;
+        border-bottom: 2px solid var(--cor3);
+        padding: 20px 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row; /* LOGO E TÍTULO LADO A LADO NA TELA GRANDE */
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    .logo img {
+        height: 120px;
+        width: auto;
+        margin: 0;
+    }
+
+    .titulo-principal h1 {
+        font-size: 2.8em;
+        margin: 0;
+        text-align: left;
+        color: var(--cor9);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    /* --- CONTEÚDO PRINCIPAL --- */
+    main.container2 {
+        width: 100%;
+        max-width: 800px; /* Limita a largura para leitura confortável na tela do PC */
+        margin: 0 auto; /* Centraliza a caixa de conteúdo */
+        padding: 50px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* --- ESTILOS DA PÁGINA INICIAL (artigo) --- */
+    .artigo article {
+        background-color: var(--cor2);
+        border: 1px solid var(--cor3);
+        border-radius: 15px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    .artigo h2 {
+        color: var(--cor9);
+        text-align: center;
+        font-size: 2em;
+    }
+
+    .artigo p {
+        line-height: 1.6;
+        text-align: justify;
+        font-size: 18px;
+        color: var(--cor7);
+    }
+
+    .artigo strong {
+        color: var(--cor8);
+    }
+
+    .artigo a {
+        background-color: var(--cor4);
+        color: #ffffff;
+        border: 2px solid var(--cor4);
+        padding: 12px 20px;
+        border-radius: 20px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        align-self: center;
+        width: auto;
+        min-width: 300px;
+        cursor: pointer;
+        transition: background-color 0.2s, transform 0.2s;
+    }
+
+    .artigo a:hover {
+        background-color: #2ca042;
+        border-color: #2ca042;
+        transform: scale(1.03); /* Efeito de crescer levemente ao passar o mouse */
+    }
+
+    .artigo a:active {
+        background-color: #1e702e;
+        border-color: #1e702e;
+        transform: scale(0.98);
+    }
+
+    /* --- CHAT - MENSAGENS --- */
+    .chat-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .mensagem {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .avatar img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .balao {
+        background-color: var(--cor3);
+        padding: 18px;
+        border-radius: 15px;
+        border-top-left-radius: 0;
+        max-width: 75%; /* Mais curto para telas grandes não ficarem com linhas enormes */
+        font-size: 16px;
+    }
+
+    .balao p {
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+
+    .balao p:last-child {
+        margin-bottom: 0;
+    }
+
+    /* --- MENSAGEM DO USUÁRIO --- */
+    .mensagem.usuario {
+        justify-content: flex-end;
+    }
+
+    .balao-usuario {
+        background-color: var(--cor4);
+        color: #ffffff;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 0;
+    }
+
+    /* --- OPÇÕES DE SENHAS FICTÍCIAS --- */
+    .opcoes-senha {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .botao-senha {
+        background-color: var(--cor2);
+        color: var(--cor9);
+        border: 2px solid var(--cor3);
+        padding: 12px 18px;
+        border-radius: 20px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.2s, border-color 0.2s;
+    }
+
+    .botao-senha:hover {
+        background-color: var(--cor3);
+        border-color: var(--cor8);
+    }
+
+    .botao-senha:active {
+        background-color: var(--cor1);
+    }
+
+    /* --- ÁREA DE DIGITAÇÃO E RODAPÉ DO CHAT (Reaproveitando modelo) --- */
+    .area-digitacao {
+        display: flex;
+        align-items: center;
+        background-color: var(--cor3);
+        border-radius: 25px;
+        padding: 8px 20px;
+        width: 100%;
+        margin-top: -15px;
+    }
+
+    .barra-busca {
+        flex-grow: 1;
+        background-color: transparent;
+        border: none;
+        color: var(--cor8);
+        font-size: 15px;
+        padding: 10px 5px;
+        outline: none;
+        cursor: not-allowed;
+    }
+
+    .botao-imagem img {
+        width: 24px;
+        height: 24px;
+        opacity: 0.5;
+    }
+
+    /* Restante igual ao tablet/celular */
+    .nota-simulador { font-size: 13px; color: var(--cor8); text-align: center; margin-top: -25px; font-style: italic; }
+    .voltar-container { display: flex; justify-content: center; gap: 15px; width: 100%; margin-top: -10px; }
+    .botao-voltar { display: flex; align-items: center; gap: 6px; color: var(--cor8); text-decoration: none; font-size: 14px; padding: 8px 16px; border: 1px solid var(--cor8); border-radius: 15px; transition: color 0.2s, background-color 0.2s; }
+    .botao-voltar:hover { background-color: var(--cor8); color: var(--cor1); }
+    .botao-voltar img { width: 16px; height: 16px; opacity: 0.7; filter: invert(1); transition: filter 0.2s; }
+    .botao-voltar:hover img { filter: invert(0); }
+    footer { background-color: var(--cor2); padding: 25px; margin-top: 40px; border-top: 4px solid var(--cor3); min-height: 80px; display: flex; align-items: center; justify-content: center; }
+    footer p { color: var(--cor8); font-size: 13px; text-align: center; opacity: 0.7; }
+}

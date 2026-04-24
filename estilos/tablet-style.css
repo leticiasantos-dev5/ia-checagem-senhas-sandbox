@@ -17,10 +17,10 @@
     --font1: "Inter", sans-serif;
 }
 
-/* TELA CELULAR (DE 0PX ATÉ 768PX) */
-@media screen and (max-width: 768px) {
+/* TELA TABLET (DE 769PX ATÉ 1024PX) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
 
-    /* RESET E GLOBAIS (Baseado no seu modelo) */
+    /* RESET E GLOBAIS */
     * {
         margin: 0px;
         padding: 0px;
@@ -45,15 +45,15 @@
 
     /* --- AVISO NO TOPO --- */
     .aviso {
-        background-color: rgba(121, 192, 255, 0.1); /* Fundo azul suave e transparente */
-        color: var(--cor9); /* Texto azul para combinar com os títulos */
-        border-bottom: 1px solid rgba(121, 192, 255, 0.3); /* Linha sutil azulada */
+        background-color: rgba(121, 192, 255, 0.1);
+        color: var(--cor9);
+        border-bottom: 1px solid rgba(121, 192, 255, 0.3);
         text-align: center;
-        padding: 10px; /* Um pouco mais de espaço */
+        padding: 12px;
     }
 
     .aviso h3 {
-        font-size: 12px; /* Letra levemente maior */
+        font-size: 13px;
         font-weight: 500;
         margin: 0;
         letter-spacing: 0.5px;
@@ -71,34 +71,33 @@
         background-color: var(--cor2);
         width: 100%;
         border-bottom: 2px solid var(--cor3);
-        padding: 20px 10px;
+        padding: 30px 40px;
     }
 
     .header {
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* LOGO E TÍTULO EMPILHADOS VERTICALMENTE */
+        align-items: center; /* Alinha o conjunto ao centro */
         justify-content: center;
-        gap: 15px;
+        gap: 20px; /* Espaço entre a logo e o título */
         width: 100%;
-    }
-
-    .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        max-width: 980px; /* Mantém um limite de largura para não ficar muito colado na borda em telas grandes */
+        margin: 0 auto;
     }
 
     .logo img {
-        height: 90px;
+        height: 110px; /* Logo consideravelmente maior */
         width: auto;
         margin: 0;
     }
 
+    .titulo-principal {
+    }
+
     .titulo-principal h1 {
-        font-size: 1.8em;
+        font-size: 2.5em; /* Título maior acompanhando a logo */
         margin: 0;
-        text-align: center;
+        text-align: center; /* Título centralizado abaixo da logo */
         color: var(--cor9);
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
     }
@@ -106,33 +105,36 @@
     /* --- CONTEÚDO PRINCIPAL --- */
     main.container2 {
         width: 100%;
-        padding: 20px;
+        max-width: 700px; /* Limita a largura do conteúdo para melhor leitura */
+        margin: 0 auto; /* Centraliza o conteúdo */
+        padding: 40px 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    /* --- ESTILOS DA PÁGINA INICIAL (artigo) --- */
     .artigo article {
         background-color: var(--cor2);
         border: 1px solid var(--cor3);
         border-radius: 15px;
-        padding: 20px;
+        padding: 30px;
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: 20px;
         box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
     }
 
     .artigo h2 {
         color: var(--cor9);
         text-align: center;
-        font-size: 1.6em;
+        font-size: 1.8em;
     }
 
     .artigo p {
-        line-height: 1.5;
+        line-height: 1.6;
         text-align: justify;
-        font-size: 16px;
+        font-size: 17px;
         color: var(--cor7);
     }
 
@@ -140,24 +142,46 @@
         color: var(--cor8);
     }
 
+    .artigo a {
+        background-color: var(--cor4);
+        color: #ffffff;
+        border: 2px solid var(--cor4);
+        padding: 12px 16px;
+        border-radius: 20px;
+        text-align: center;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 15px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        align-self: center;
+        width: 60%;
+        max-width: 300px;
+    }
+
+    .artigo a:active {
+        background-color: #1e702e;
+        border-color: #1e702e;
+    }
+
     /* --- CHAT - MENSAGENS --- */
     .chat-container {
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 35px; /* Espaçamento aumentado para dar mais respiro entre os balões */
+        gap: 35px;
     }
 
     .mensagem {
         display: flex;
-        align-items: flex-start; /* Alinha o avatar e o balão no topo */
-        gap: 10px; /* Espaço entre o avatar e o balão */
+        align-items: flex-start;
+        gap: 10px;
     }
 
     .avatar img {
-        width: 45px; /* Tamanho do ícone de usuário/bot */
+        width: 45px;
         height: 45px;
-        border-radius: 50%; /* Deixa o ícone redondo */
+        border-radius: 50%;
         object-fit: cover;
     }
 
@@ -165,8 +189,8 @@
         background-color: var(--cor3);
         padding: 15px;
         border-radius: 15px;
-        border-top-left-radius: 0; /* Faz a pontinha do balão apontar para o robô na esquerda */
-        max-width: 85%; /* Evita que o balão encoste totalmente na borda direita */
+        border-top-left-radius: 0;
+        max-width: 85%;
     }
 
     .balao p {
@@ -180,23 +204,23 @@
 
     /* --- MENSAGEM DO USUÁRIO --- */
     .mensagem.usuario {
-        justify-content: flex-end; /* Alinha o balão do usuário à direita */
+        justify-content: flex-end;
     }
 
     .balao-usuario {
-        background-color: var(--cor4); /* Verde para diferenciar do bot */
+        background-color: var(--cor4);
         color: #ffffff;
-        border-top-left-radius: 15px; /* Restaura a borda esquerda arredondada */
-        border-top-right-radius: 0; /* Faz a pontinha apontar para o usuário na direita */
+        border-top-left-radius: 15px;
+        border-top-right-radius: 0;
     }
 
     /* --- OPÇÕES DE SENHAS FICTÍCIAS --- */
     .opcoes-senha {
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap; /* Permite que os botões quebrem linha se a tela for muito pequena */
-        justify-content: center; /* Centraliza os botões na tela */
-        gap: 10px; /* Espaço entre os botões reduzido um pouquinho para caberem melhor */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
         width: 100%;
     }
 
@@ -204,8 +228,8 @@
         background-color: var(--cor2);
         color: var(--cor9);
         border: 2px solid var(--cor3);
-        padding: 10px 14px; /* Levemente menor para caber perfeitamente no mobile */
-        border-radius: 20px; /* Bordas bem arredondadas como balões */
+        padding: 10px 14px;
+        border-radius: 20px;
         text-align: center;
         text-decoration: none;
         font-weight: 600;
@@ -220,36 +244,36 @@
     .area-digitacao {
         display: flex;
         align-items: center;
-        background-color: var(--cor3); /* Fundo uniforme escuro */
-        border-radius: 25px; /* Bordas bem arredondadas, estilo pílula */
+        background-color: var(--cor3);
+        border-radius: 25px;
         padding: 5px 15px;
         width: 100%;
-        margin-top: -15px; /* Puxa a barra para mais perto das opções acima */
+        margin-top: -15px;
     }
 
     .barra-busca {
-        flex-grow: 1; /* Faz a barra de texto esticar e empurrar o ícone para o canto */
-        background-color: transparent; /* Pega a cor uniforme da div 'area-digitacao' */
+        flex-grow: 1;
+        background-color: transparent;
         border: none;
-        color: var(--cor8); /* Cor do texto (cinza) para aparência de inativo */
+        color: var(--cor8);
         font-size: 14px;
         padding: 10px 5px;
-        outline: none; /* Remove aquela linha em volta ao clicar */
-        cursor: not-allowed; /* Mostra cursor de bloqueado ao passar o mouse */
+        outline: none;
+        cursor: not-allowed;
     }
 
     .botao-imagem img {
         width: 24px;
         height: 24px;
-        opacity: 0.5; /* Deixa o ícone levemente transparente indicando inatividade */
+        opacity: 0.5;
     }
 
     /* --- NOTA DO SIMULADOR --- */
     .nota-simulador {
         font-size: 12px;
-        color: var(--cor8); /* Tom de cinza para ficar discreto */
+        color: var(--cor8);
         text-align: center;
-        margin-top: -25px; /* Puxa a nota para colar na barra de busca (compensa o gap) */
+        margin-top: -25px;
         font-style: italic;
     }
 
@@ -260,46 +284,26 @@
         gap: 10px;
         flex-wrap: wrap;
         width: 100%;
-        margin-top: -15px; /* Compensa o espaçamento do chat para ficar mais próximo da nota */
+        margin-top: -15px;
     }
 
     .botao-voltar {
         display: flex;
         align-items: center;
-        gap: 5px; /* Espaço entre o ícone e o texto */
-        color: var(--cor8); /* Cor discreta para não tirar o foco da simulação */
+        gap: 5px;
+        color: var(--cor8);
         text-decoration: none;
         font-size: 12px;
         padding: 6px 14px;
-        border: 1px solid var(--cor8); /* Apenas uma linha ao redor */
+        border: 1px solid var(--cor8);
         border-radius: 15px;
     }
     
     .botao-voltar img {
         width: 14px;
         height: 14px;
-        opacity: 0.7; /* Deixa o ícone suave para combinar com o texto cinza */
-        filter: invert(1); /* Transforma o ícone preto em branco para aparecer no fundo escuro */
-    }
-
-    /* --- BOTÃO INICIAR SIMULAÇÃO --- */
-    .artigo a {
-        background-color: var(--cor4); /* Verde igual aos botões de senha */
-        color: #ffffff;
-        border: 2px solid var(--cor4);
-        padding: 10px 14px;
-        border-radius: 20px; /* Bordas bem arredondadas como balões */
-        text-align: center;
-        text-decoration: none;
-        font-weight: 600;
-        font-size: 16px;
-        margin-top: 15px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-    }
-
-    .artigo a:active {
-        background-color: #1e702e;
-        border-color: #1e702e;
+        opacity: 0.7;
+        filter: invert(1);
     }
 
     /* --- FOOTER --- */
@@ -316,7 +320,7 @@
 
     footer p {
         color: var(--cor8);
-        font-size: 11px;
+        font-size: 12px;
         text-align: center;
         opacity: 0.7;
     }
