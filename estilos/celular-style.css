@@ -257,17 +257,29 @@
     .voltar-container {
         display: flex;
         justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
         width: 100%;
         margin-top: -15px; /* Compensa o espaçamento do chat para ficar mais próximo da nota */
     }
 
     .botao-voltar {
+        display: flex;
+        align-items: center;
+        gap: 5px; /* Espaço entre o ícone e o texto */
         color: var(--cor8); /* Cor discreta para não tirar o foco da simulação */
         text-decoration: none;
         font-size: 12px;
         padding: 6px 14px;
         border: 1px solid var(--cor8); /* Apenas uma linha ao redor */
         border-radius: 15px;
+    }
+    
+    .botao-voltar img {
+        width: 14px;
+        height: 14px;
+        opacity: 0.7; /* Deixa o ícone suave para combinar com o texto cinza */
+        filter: invert(1); /* Transforma o ícone preto em branco para aparecer no fundo escuro */
     }
 
     /* --- BOTÃO INICIAR SIMULAÇÃO --- */
